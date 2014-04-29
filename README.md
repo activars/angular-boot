@@ -1,22 +1,23 @@
-Global dependencies 
+## angular-boot
 
-  Node: 
+Pure opinionated angular project boostrapping example
 
+#### Global dependencies
     npm install -g grunt-cli napa browserify node-static foreman
 
 
 
-Install app specific dependencies
-
+#### Install app specific dependencies
+ 
     npm install && napa
 
 
-Generates inital external `dist/main-libs.js`, application `dist/main.js`, css `dist/main.css` files for development
+#### Generates inital external `dist/main-libs.js`, application `dist/main.js`, css `dist/main.css` files for development
     
     grunt browserify:libs && grunt browserify:app && grunt sass
 
 
-Running apps in root directory
+#### Running apps in root directory
 
     nf start
   
