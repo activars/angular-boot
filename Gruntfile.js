@@ -2,9 +2,13 @@
 
 var _ = require("lodash");
 
-module.exports = function (grunt) {
-  var distDir = "webapp/dist";
+// Common Directories
+var distDir = "webapp/dist";
+var sassDir = "webapp/sass";
+var appDir  = "webapp/app";
 
+module.exports = function (grunt) {
+  
   var commonShim = {
     "jquery": {
       path: "./node_modules/jquery/dist/jquery.js",
@@ -66,7 +70,7 @@ module.exports = function (grunt) {
       },
 
       app: {
-        src: ["webapp/app/**/*.js"],
+        src: ["<%= appDir %>/**/*.js"],
         dest: "<%= distDir %>/main-app.js",
         options: {
           alias: libAlias,
@@ -84,7 +88,7 @@ module.exports = function (grunt) {
           alias: libAlias,
           transform: ["partialify"]
         },
-        src: ["webapp/app/**/*.js"],
+        src: ["<%= appDir %>/**/*.js"],
         dest: "<%= distDir %>/main-bundle.js"
       }
     },
@@ -94,20 +98,20 @@ module.exports = function (grunt) {
           style: 'compressed'
         },
         files: {
-          'webapp/dist/main.css' : 'webapp/sass/main.scss'
+          '<%= distDir %>/main.css' : '<%= sassDir %>/main.scss'
         }
       }
     },
     watch: {
       script: {
-        files: ['webapp/app/**/*.js', 'webapp/app/**/*.html'],
+        files: ['<%= appDir %>/**/*.js', '<%= appDir %>/**/*.html'],
         tasks: ['browserify:app'],
         options: {
           spawn: false
         }
       },
       sass: {
-        files: 'webapp/sass/**/*.scss',
+        files: '<%= sassDir %>/**/*.scss',
         tasks: ['sass']
       }
     }
