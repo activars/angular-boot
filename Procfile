@@ -1,2 +1,2 @@
-css: grunt watch:css
-js:  grunt watch:script
+SASS: grunt watch:sass
+JS:   grunt watch:script
