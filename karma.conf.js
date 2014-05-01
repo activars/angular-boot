@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "dist/main-libs.js"
+      "../dist/main-libs.js"
     ],
 
     browserify: {
@@ -55,7 +55,7 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['chrome'],
+    browsers: ['Chrome'],
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
