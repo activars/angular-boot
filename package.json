@@ -9,7 +9,7 @@
     "moment": "~2.6.0"
   },
   "devDependencies": {
-    "mocha": ">= 0.14.0",
+    "mocha": "~1.18.2",
     "grunt": "~0.4.4",
     "browserify": "~3.38.0",
     "grunt-browserify": "~2.0.8",
@@ -18,7 +18,10 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-sass": "~0.7.3",
     "hbsfy": "1.3.2",
-    "partialify": "*"
+    "partialify": "*",
+    "karma": "~0.12.14",
+    "karma-browserifast": "~0.6.0",
+    "karma-chrome-launcher": "^0.1.3"
   },
   "script": {
     "install": "napa"
@@ -30,7 +33,6 @@
     "angular-resource": "angular/bower-angular-resource#v1.2.16-build.70+sha.6e420ff",
     "angular-ui-router": "angular-ui/ui-router#0.2.10"
   },
-
   "shims": {
     "jquery": {
       "path": "./node_modules/jquery/dist/jquery.js",
@@ -42,22 +44,32 @@
     },
     "angular-resource": {
       "path": "./node_modules/angular-resource/angular-resource.js",
-      "depends": ["angular"]
+      "depends": [
+        "angular"
+      ]
     },
     "angular-animate": {
       "path": "./node_modules/angular-animate/angular-animate.js",
-      "depends": ["angular"]
+      "depends": [
+        "angular"
+      ]
     },
     "angular-strap": {
       "path": "./node_modules/angular-strap/dist/angular-strap.js",
-      "depends": ["angular", "angular-animate", "angular-strap-tpl"]
+      "depends": [
+        "angular",
+        "angular-animate",
+        "angular-strap-tpl"
+      ]
     },
     "angular-strap-tpl": {
       "path": "./node_modules/angular-strap/dist/angular-strap.tpl.js"
     },
     "angular-ui-router": {
       "path": "./node_modules/angular-ui-router/release/angular-ui-router.js",
-      "depends": ["angular"]
+      "depends": [
+        "angular"
+      ]
     },
     "moment": {
       "path": "./node_modules/moment/moment.js",
@@ -65,7 +77,10 @@
     },
     "angular-moment": {
       "path": "./node_modules/angular-moment/angular-moment.js",
-      "depends": ["moment", "angular"]
+      "depends": [
+        "moment",
+        "angular"
+      ]
     }
   }
 }
