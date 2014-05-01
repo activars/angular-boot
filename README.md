@@ -9,7 +9,7 @@ Pure opinionated angular project boostrapping example:
 * Configure Gruntfile.js to manage your own stacks
 
 ##### Global dependencies
-    npm install -g grunt-cli napa browserify node-static foreman karma
+    npm install -g grunt-cli napa browserify node-static foreman karma-cli
 
 
 #### Install app specific dependencies
